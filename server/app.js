@@ -150,7 +150,7 @@ const client = require("twilio")(accountSid, authToken);
 
 setInterval(() => {
   const now = new Date();
-  const datetime = now.toISOString(); 
+  const datetime = now.toISOString();
   // Get the current datetime in ISO format
   // match the exact date including the date, month, year, hours, minutes and seconds..
   console.log(datetime);
