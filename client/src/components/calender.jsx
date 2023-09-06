@@ -6,10 +6,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 
 function Calender({ setRemindeAt }) {
-  // const [value, setValue] = useState(dayjs("2022-04-17T15:30"));
-  //   console.log(value);
   const handleChange = (newValue) => {
-    // setValue(newValue);
     setRemindeAt(newValue);
   };
 
@@ -20,33 +17,10 @@ function Calender({ setRemindeAt }) {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DemoContainer components={["DateTimePicker", "DateTimePicker"]}>
-        {/* <DateTimePicker
-          label="Uncontrolled picker"
-          defaultValue={dayjs("2022-04-17T15:30")}
-        /> */}
         <DateTimePicker
           label="Uncontrolled picker"
-          // defaultValue={dayjs('2022-04-17T15:30')}
           onChange={handleChange}
-          // minDate={new Date()}
-          // minDate={dayjs(new Date())}
-          // minTime={dayjs()
-          //   .set("hour", currentHour)
-          //   .set("minute", currentMinute)
-          //   .set("second", 0)}
           disablePast
-          // slotProps={{
-          //   actionBar: { actions: ["clear"] },
-          // }}
-
-          // Apply slotProps when applySlotProps is true
-          // slotProps={
-          //   applySlotProps
-          //     ? {
-          //         actionBar: { actions: ["clear"] },
-          //       }
-          //     : {}
-          // }
         />
       </DemoContainer>
     </LocalizationProvider>
